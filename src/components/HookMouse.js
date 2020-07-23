@@ -15,6 +15,11 @@ function HookMouse() {
         console.log('UseEffect called!');
         window.addEventListener('mousemove', logMousePosition);
         // document.title = `Clicked ${count} times`;
+
+        return () => {
+            console.log('Component unmounting code');
+            window.removeEventListener('mousemove', logMousePosition);
+        }
     }, []);
 
     return (
