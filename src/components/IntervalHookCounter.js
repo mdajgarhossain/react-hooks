@@ -9,13 +9,18 @@ function IntervalHookCounter() {
     }
 
     useEffect(() => {
+        function doSomething() {
+            console.log(someProps);
+        }
+        doSomething();
+        
         const interval = setInterval(tick, 1000);
         console.log('useEffect called');
 
         return () => {
             clearInterval(interval)
         }
-    }, []);
+    }, [someProps]);
 
     return (
         <div>
