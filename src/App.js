@@ -15,9 +15,17 @@ import MouseContainer from './components/MouseContainer';
 import IntervalClassCounter from './components/IntervalClassCounter';
 import IntervalHookCounter from './components/IntervalHookCounter';
 import DataFetching from './components/DataFetching';
+import ComponentC from './components/ComponentC';
+import ClassRenderPropsOne from './components/ClassRenderPropsOne';
+import ClassRenderPropsTwo from './components/ClassRenderPropsTwo';
+import User from './components/ClassRenderPropsThree';
+import ClassCounterRenderProps from './components/ClassCounterRenderProps';
+
+
+// export const UserContext = React.createContext();
+// console.log(UserContext);
 
 function App() {
-  
   return (
     <div className="App">
       {/* <ClassCounter /> */}
@@ -35,7 +43,23 @@ function App() {
       {/* <MouseContainer /> */}
       {/* <IntervalClassCounter />
       <IntervalHookCounter /> */}
-      <DataFetching />
+      {/* <DataFetching /> */}
+      {/* <UserContext.Provider value={'Jewell'}>
+        <ComponentC />
+      </UserContext.Provider> */}
+      {/* <ClassRenderPropsOne />
+      <ClassRenderPropsTwo /> */}
+      <User render={(isLoggedIn) => isLoggedIn ? 'Jewell' : 'Guest'} />
+      <ClassCounterRenderProps 
+        renderProps={(count, incrementCount) => 
+          <ClassRenderPropsOne count={count} incrementCount={incrementCount}/>
+        }
+      />
+      <ClassCounterRenderProps 
+        renderProps={(count, incrementCount) => 
+          <ClassRenderPropsTwo count={count} incrementCount={incrementCount}/>
+        }
+      />
     </div>
   );
 }
