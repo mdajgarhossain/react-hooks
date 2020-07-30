@@ -50,16 +50,16 @@ function App() {
       {/* <ClassRenderPropsOne />
       <ClassRenderPropsTwo /> */}
       <User render={(isLoggedIn) => isLoggedIn ? 'Jewell' : 'Guest'} />
-      <ClassCounterRenderProps 
-        renderProps={(count, incrementCount) => 
+      <ClassCounterRenderProps>
+        {(count, incrementCount) => 
           <ClassRenderPropsOne count={count} incrementCount={incrementCount}/>
         }
-      />
-      <ClassCounterRenderProps 
-        renderProps={(count, incrementCount) => 
+      </ClassCounterRenderProps>
+      <ClassCounterRenderProps>
+        {(count, incrementCount) => 
           <ClassRenderPropsTwo count={count} incrementCount={incrementCount}/>
         }
-      />
+      </ClassCounterRenderProps>
     </div>
   );
 }
