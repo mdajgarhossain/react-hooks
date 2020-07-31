@@ -22,6 +22,7 @@ import User from './components/ClassRenderPropsThree';
 import ClassCounterRenderProps from './components/ClassCounterRenderProps';
 import FunctionalComponentRenderPropsOne from './components/FunctionalComponentRenderPropsOne';
 import FunctionalComponentRenderPropsTwo from './components/FunctionalComponentRenderPropsTwo';
+import FunctionalComponentRenderPropsImplementation from './components/FunctionalComponentRenderPropsImplementation';
 
 
 // export const UserContext = React.createContext();
@@ -62,8 +63,26 @@ function App() {
           <ClassRenderPropsTwo count={count} incrementCount={incrementCount}/>
         }
       </ClassCounterRenderProps> */}
-      <FunctionalComponentRenderPropsOne />
-      <FunctionalComponentRenderPropsTwo />
+      {/* <FunctionalComponentRenderPropsOne />
+      <FunctionalComponentRenderPropsTwo /> */}
+      <FunctionalComponentRenderPropsImplementation 
+        renderProps={(name, handleName, submitName) => (
+          <FunctionalComponentRenderPropsOne 
+            name={name}
+            handleName={handleName} 
+            submitName={submitName}
+          />
+        )}
+      />
+      <FunctionalComponentRenderPropsImplementation 
+        renderProps={(name, handleName, submitName) => (
+          <FunctionalComponentRenderPropsTwo 
+            name={name}
+            handleName={handleName} 
+            submitName={submitName}
+          />
+        )}
+      />
     </div>
   );
 }

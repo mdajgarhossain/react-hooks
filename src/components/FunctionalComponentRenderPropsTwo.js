@@ -1,15 +1,7 @@
 import React, { useState } from 'react'
 
-function FunctionalComponentRenderPropsTwo() {
-    const [name, setName] = useState('');
-    const [nameFromBtnClick, setNameFromBtnClick] = useState('');
-
-    const handleChange = (event) => {
-        setName(event.target.value);
-    }
-    const handleClick = () => {
-        setNameFromBtnClick(name);
-    }
+function FunctionalComponentRenderPropsTwo(props) {
+    const {name, handleName, submitName} = props;
 
     return (
         <div>
@@ -19,12 +11,11 @@ function FunctionalComponentRenderPropsTwo() {
                     type="text" 
                     id="name" 
                     placeholder="Enter your name"
-                    value={name} 
-                    onChange={handleChange}
+                    onChange={handleName}
                 />
             </form>
-            <h3 onMouseOver={handleClick}>Hover mouse here to submit</h3>
-            <h3>My name is {nameFromBtnClick}</h3>
+            <h3 onMouseOver={submitName}>Hover mouse here to submit</h3>
+            <h3>My name is {name}</h3>
         </div>
     )
 }
