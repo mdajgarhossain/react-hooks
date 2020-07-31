@@ -20,6 +20,8 @@ import ClassRenderPropsOne from './components/ClassRenderPropsOne';
 import ClassRenderPropsTwo from './components/ClassRenderPropsTwo';
 import User from './components/ClassRenderPropsThree';
 import ClassCounterRenderProps from './components/ClassCounterRenderProps';
+import FunctionalComponentRenderPropsOne from './components/FunctionalComponentRenderPropsOne';
+import FunctionalComponentRenderPropsTwo from './components/FunctionalComponentRenderPropsTwo';
 
 
 // export const UserContext = React.createContext();
@@ -49,7 +51,7 @@ function App() {
       </UserContext.Provider> */}
       {/* <ClassRenderPropsOne />
       <ClassRenderPropsTwo /> */}
-      <User render={(isLoggedIn) => isLoggedIn ? 'Jewell' : 'Guest'} />
+      {/* <User render={(isLoggedIn) => isLoggedIn ? 'Jewell' : 'Guest'} />
       <ClassCounterRenderProps>
         {(count, incrementCount) => 
           <ClassRenderPropsOne count={count} incrementCount={incrementCount}/>
@@ -59,7 +61,9 @@ function App() {
         {(count, incrementCount) => 
           <ClassRenderPropsTwo count={count} incrementCount={incrementCount}/>
         }
-      </ClassCounterRenderProps>
+      </ClassCounterRenderProps> */}
+      <FunctionalComponentRenderPropsOne />
+      <FunctionalComponentRenderPropsTwo />
     </div>
   );
 }
