@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {UserContext, ChannelContext} from '../App';
+import {DeveloperContext} from './ComponentC';
 
 function ComponentF() {
+    const developer = useContext(DeveloperContext);
+    console.log(developer);
 
     return (
         <div>
@@ -25,6 +28,8 @@ function ComponentF() {
                     }
                 }
             </UserContext.Consumer>
+            <h4>Consume context value with useContext() hook</h4>
+            <h3>Developer's name: {developer.name}</h3>
         </div>
     )
 }

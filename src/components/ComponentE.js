@@ -4,7 +4,7 @@ import {UserContext, ChannelContext} from '../App';
 
 function ComponentE() {
     const user = useContext(UserContext);
-    console.log(user);
+    // console.log(user);
     const channel = useContext(ChannelContext);
     return (
         <div>
