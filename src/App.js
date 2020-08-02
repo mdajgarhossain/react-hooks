@@ -25,8 +25,9 @@ import FunctionalComponentRenderPropsTwo from './components/FunctionalComponentR
 import FunctionalComponentRenderPropsImplementation from './components/FunctionalComponentRenderPropsImplementation';
 
 
-// export const UserContext = React.createContext();
-// console.log(UserContext);
+export const UserContext = React.createContext();
+console.log(UserContext);
+export const ChannelContext = React.createContext();
 
 function App() {
   return (
@@ -47,9 +48,6 @@ function App() {
       {/* <IntervalClassCounter />
       <IntervalHookCounter /> */}
       {/* <DataFetching /> */}
-      {/* <UserContext.Provider value={'Jewell'}>
-        <ComponentC />
-      </UserContext.Provider> */}
       {/* <ClassRenderPropsOne />
       <ClassRenderPropsTwo /> */}
       {/* <User render={(isLoggedIn) => isLoggedIn ? 'Jewell' : 'Guest'} />
@@ -65,7 +63,7 @@ function App() {
       </ClassCounterRenderProps> */}
       {/* <FunctionalComponentRenderPropsOne />
       <FunctionalComponentRenderPropsTwo /> */}
-      <FunctionalComponentRenderPropsImplementation 
+      {/* <FunctionalComponentRenderPropsImplementation 
         renderProps={(name, handleName, submitName) => (
           <FunctionalComponentRenderPropsOne 
             name={name}
@@ -82,7 +80,13 @@ function App() {
             submitName={submitName}
           />
         )}
-      />
+      /> */}
+      <UserContext.Provider value='Jewell'>
+        <ChannelContext.Provider value='Codevolution'>
+          <ComponentC />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
+
     </div>
   );
 }
