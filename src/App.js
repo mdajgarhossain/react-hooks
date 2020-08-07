@@ -88,9 +88,9 @@ function App() {
           <ComponentC />
         </ChannelContext.Provider>
       </UserContext.Provider> */}
-      <UserProvider value='Jewell - Software Developer'>
+      {/* <UserProvider value='Jewell - Software Developer'> */}
         <ComponentA />
-      </UserProvider>
+      {/* </UserProvider> */}
 
     </div>
   );
