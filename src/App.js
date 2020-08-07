@@ -23,6 +23,8 @@ import ClassCounterRenderProps from './components/ClassCounterRenderProps';
 import FunctionalComponentRenderPropsOne from './components/FunctionalComponentRenderPropsOne';
 import FunctionalComponentRenderPropsTwo from './components/FunctionalComponentRenderPropsTwo';
 import FunctionalComponentRenderPropsImplementation from './components/FunctionalComponentRenderPropsImplementation';
+import ComponentA from './components/ComponentA';
+import { UserProvider } from './components/userContext';
 
 
 export const UserContext = React.createContext();
@@ -81,11 +83,14 @@ function App() {
           />
         )}
       /> */}
-      <UserContext.Provider value='Jewell'>
+      {/* <UserContext.Provider value='Jewell'>
         <ChannelContext.Provider value='Codevolution'>
           <ComponentC />
         </ChannelContext.Provider>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
+      <UserProvider value='Jewell - Frontend Developer'>
+        <ComponentA />
+      </UserProvider>
 
     </div>
   );
