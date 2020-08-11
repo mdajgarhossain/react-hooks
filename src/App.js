@@ -27,6 +27,7 @@ import ComponentA from './components/ComponentA';
 import { UserProvider } from './components/userContext';
 import Navbar from './components/theNetNinja/Navbar';
 import BookList from './components/theNetNinja/BookList';
+import ThemeContextProvider from './components/theNetNinja/contexts/ThemeContext';
 
 
 export const UserContext = React.createContext();
@@ -94,8 +95,10 @@ function App() {
         {/* <ComponentA /> */}
       {/* </UserProvider> */}
 
-      <Navbar />
-      <BookList />
+      <ThemeContextProvider>
+        <Navbar />
+        <BookList />
+      </ThemeContextProvider>
     </div>
   );
 }
