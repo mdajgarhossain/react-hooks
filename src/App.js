@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
 import ClassCounter from './components/ClassCounter';
 import HookCounter from './components/HookCounter';
 // import Hello from './components/Helsinki/State';
@@ -25,10 +25,12 @@ import FunctionalComponentRenderPropsTwo from './components/FunctionalComponentR
 import FunctionalComponentRenderPropsImplementation from './components/FunctionalComponentRenderPropsImplementation';
 import ComponentA from './components/ComponentA';
 import { UserProvider } from './components/userContext';
+import Navbar from './components/theNetNinja/Navbar';
+import BookList from './components/theNetNinja/BookList';
 
 
 export const UserContext = React.createContext();
-console.log(UserContext);
+// console.log(UserContext);
 export const ChannelContext = React.createContext();
 
 function App() {
@@ -89,9 +91,11 @@ function App() {
         </ChannelContext.Provider>
       </UserContext.Provider> */}
       {/* <UserProvider value='Jewell - Software Developer'> */}
-        <ComponentA />
+        {/* <ComponentA /> */}
       {/* </UserProvider> */}
 
+      <Navbar />
+      <BookList />
     </div>
   );
 }
