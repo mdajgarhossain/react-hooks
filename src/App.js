@@ -28,6 +28,7 @@ import { UserProvider } from './components/userContext';
 import Navbar from './components/theNetNinja/Navbar';
 import BookList from './components/theNetNinja/BookList';
 import ThemeContextProvider from './components/theNetNinja/contexts/ThemeContext';
+import ThemeToggle from './components/theNetNinja/ThemeToggle';
 
 
 export const UserContext = React.createContext();
@@ -98,6 +99,7 @@ function App() {
       <ThemeContextProvider>
         <Navbar />
         <BookList />
+        <ThemeToggle />
       </ThemeContextProvider>
     </div>
   );
