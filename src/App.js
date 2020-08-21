@@ -30,6 +30,7 @@ import BookList from './components/theNetNinja/BookList';
 import ThemeContextProvider from './components/theNetNinja/contexts/ThemeContext';
 import ThemeToggle from './components/theNetNinja/ThemeToggle';
 import AuthContextProvider from './components/theNetNinja/contexts/AuthContext';
+import UseReducerOne from './components/UseReducerOne';
 
 
 export const UserContext = React.createContext();
@@ -97,13 +98,15 @@ function App() {
         {/* <ComponentA /> */}
       {/* </UserProvider> */}
 
-      <ThemeContextProvider>
+      {/* <ThemeContextProvider>
         <AuthContextProvider>
           <Navbar />
           <BookList />
           <ThemeToggle />
         </AuthContextProvider>
-      </ThemeContextProvider>
+      </ThemeContextProvider> */}
+
+      <UseReducerOne />
     </div>
   );
 }
