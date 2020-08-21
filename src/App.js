@@ -32,6 +32,7 @@ import ThemeToggle from './components/theNetNinja/ThemeToggle';
 import AuthContextProvider from './components/theNetNinja/contexts/AuthContext';
 import UseReducerOne from './components/UseReducerOne';
 import UseReducerTwo from './components/UseReducerTwo';
+import UseReducerThree from './components/UseReducerThree';
 
 
 export const UserContext = React.createContext();
@@ -108,7 +109,8 @@ function App() {
       </ThemeContextProvider> */}
 
       {/* <UseReducerOne /> */}
-      <UseReducerTwo />
+      {/* <UseReducerTwo /> */}
+      <UseReducerThree />
     </div>
   );
 }
